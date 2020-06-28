@@ -12,6 +12,10 @@ Before exploring how to utilize a debugger for effective programming in JupyterL
 
 ### Using the Proper Kernel
 
+| ![gif1.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif1.GIF?raw=true) |  
+19	|:--:| 
+20	| *After registering and logging in, search for & select "Watson Studio."* |
+
 ### Library Management
 
 ### Deleting Code and Retaining Results
