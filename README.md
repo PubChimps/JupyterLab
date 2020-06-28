@@ -1,11 +1,11 @@
 # Guide to JupyterLab - Debugging in JupyterLab
 
-intro
+JupyterLab is a next-generation web-based user interface for Project Jupyter that enables the interactive development and organization of computing serivces across dozens of programming languages. 
 
-## outline
-### common mistakes
-### debugging in jupyterlab
-### review and next steps 
+## Outline
+### Common Mistakes
+### Debugging in Jupyterlab
+### Review and Next Steps 
 
 ## Common Mistakes
 Before exploring how to utilize a debugger for effective programming in JupyterLab, lets take a look at how to quickly solve three of the most frequent mistakes performed when using Jupyterlab, for more quick fixes check out Guide to JupyterLab - Common Mistakes.
