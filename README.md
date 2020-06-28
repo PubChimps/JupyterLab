@@ -12,17 +12,24 @@ Before exploring how to utilize a debugger for effective programming in JupyterL
 
 ### Using the Proper Kernel
 
+A kernel provides programming language support in JupyterLab. Navigating the many development environments availble in JupyterLab can be tricking, especially in when utilizing cloud-managed notebook sevices. For instance, [Azure Notebooks](https://notebooks.azure.com/help/jupyter-notebooks/available-kernels) offers 5 different kernels in 3 programming languages. An error may be produced by running code in the wrong environment, such as the example below, but it is an easy fix.
+
 |![gif2.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif2.GIF?raw=true) |  
 |:--:| 
 | *JupyterLab is a development frontend that enables many different programming language backends* |
 
 ### Library Management
 
+Utilizing libraries is critical in extending the fuctionality of Python. When using managed JupyterLab instances, it can be hard to identify which library packages are available, as many come preinstalled. Lines of code beginning with an exclamation point (!) will be executed as shell commands in JupyterLab. This functionality can used to identify the packages already installed in an evironment by running `!pip list`. [pip](https://pypi.org/project/pip/) is a package installer fo Python, and can install missing libraries with `!pip install <missing package>` (note: often, a kernel will have to be restarted in order for the newly installed libraries to be available).
+
 |![gif3.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif3.GIF?raw=true) |  
 |:--:| 
 | *Libraries must installed before they can be imported. This is commonly done with pip* |
 
 ### Deleting Code and Retaining Results
+
+In JupyterLab, code that is not needed can be deleted from a notebook by using the "cut cell" feature. However, the changes made to variables, objects, and files of deleted code will remain in the current kernel session. An example is illustrated in the gif below. If the value of x is intended to be 5 and not 1000, the variable will not revert back to its intial value just because the code that altered it was deleted, and the first cell of code must be rerun.
+
 
 |![gif1.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif1.GIF?raw=true) |  
 |:--:| 
