@@ -50,5 +50,5 @@ Magic commands can also be used for debugging in JupyterLab.
 `%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`.
 
 ## Review and Next Steps
-
+This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. The Guide to JupyterLab has many more examples of important concepts to understand to enable success in developing with JupyterLab, including how to check for and handle exceptions with Unit Tests and a Glossary of key terms.
 
