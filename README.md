@@ -3,9 +3,17 @@
 JupyterLab is a next-generation web-based user interface for Project Jupyter that enables the interactive development and organization of computing serivces across dozens of programming languages. When writing Python in JuypterLab, both new and experienced developers may run into issues. A debugger is a programming tool that can provide additional context to errors and exceptions that may occur when executing code. This guide will provide an introduction to debugging in JupyterLab. For more information on JupyerLab, check out the rest of the Guide to JupyterLab series.
 
 ## Outline
-### Common Mistakes
-### Debugging in Jupyterlab
-### Review and Next Steps 
+<!--ts-->
+   * [Common Mistakes](#common-mistakes)
+      * [Using the Proper Kernel](#using-the-proper-kernel)
+      * [Library Management](#library-management)
+      * [Deleting Code and Retain Results](#delete-code-and-retain-results)
+   * [Debugging in JupyterLab](#debugging-in-jupyterlab)
+      * [Magic Commands](#magic-commands)
+      * [%debug](#debug)
+      * [%pdb](#pdb)
+   * [Review and Next Steps](#review-and-next-steps)
+<!--te--> 
 
 ## Common Mistakes
 Before exploring how to utilize a debugger for effective programming in JupyterLab, lets take a look at how to quickly solve three of the most frequent mistakes performed when using Jupyterlab, for more quick fixes check out Guide to JupyterLab - Common Mistakes.
@@ -24,7 +32,7 @@ Utilizing libraries is critical in extending the fuctionality of Python. When us
 |:--:| 
 | *Libraries must installed before they can be imported. This is commonly done with pip* |
 
-### Deleting Code and Retaining Results
+### Deleting Code and Retain Results
 In JupyterLab, code that is not needed can be deleted from a notebook by using the "cut cell" feature. However, the changes made to variables, objects, and files of deleted code will remain in the current kernel session. An example is illustrated in the gif below. If the value of x is intended to be 5 and not 1000, the variable will not revert back to its intial value just because the code that altered it was deleted, and the first cell of code must be rerun.
 
 
