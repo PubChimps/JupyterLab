@@ -38,10 +38,10 @@ If solutions to common mistakes are not resolving the issues present in Python c
 ### Magic Commands 
 Magic commands are special enhancements that can provide additional functionality beyond typical Python snytax and are called by using the percent sign `%`. For example, the same code provide to run a shell command in a previous section (`!pip list`) can be rewrititen with a magic command as follows:
 
-`\n
-%shell\n
-pip list\n
-`
+```
+%shell
+pip list
+```
 Magic commands can also be used for debugging in JupyterLab.
 
 ### %debug
