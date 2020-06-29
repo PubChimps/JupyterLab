@@ -53,14 +53,48 @@ pip list
 Magic commands can also be used for debugging in JupyterLab.
 
 ### %debug
-The code below that finda the intersection between two strings will be used to showcase the `%debug` and `%pdb` features in JupyterLab.
+The code below finds the intersection between two strings and will be used to showcase the `%debug` and `%pdb` features in JupyterLab.
 
-<script src="https://gist.github.com/PubChimps/70cca0645173606f0d111a63cac70261.js"></script>
+```
+def countdict(s):
+   counter = dict()
 
+   for i in s:
+       if i in counter.keys():
+           counter[i] += 1
+       else:
+           counter[i] = 1
+   return counter
+
+def intersect(s,t):
+  s = s.replace(' ', '')
+  t = t.replace(' ', '')
+  result = ''
+
+  count = countdict(s)
+
+  for i in t:
+    if count[i] != 0:
+      res = res + i
+      count[i] = count[i] - 1
+  
+  return res
+
+def getintersect(s,t):
+   print(intersect(s,t))
+```
+
+If copied into a notebook cell, this code can be run `getintersect('Bloomberg','BQuant Advocate')` and will produce a KeyError as follows:
+
+This KeyError can be investigated further be using `%debug`. Upon entering debugging mode, a list of available options can be presented by entering `h`. A *stack trace* is a hierarchical list of function calls that were made to produce an exception. A full stack trace can be provided by entering `bt` and navigated by typing `up` or `down`. 
+
+
+The current state of variables at the time of exception can also be displayed with `%debug`. The following gif shows how this is used to fix the KeyError.
 
 ### %pdb
 
-`%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`.
+`%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`. It also be used as a library by adding `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is 
+a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. From here, variables can be analzyed as before, and execution can continue to run by *stepping into* and *stepping over* subsequant code. 
 
 ## Review and Next Steps
 This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. The Guide to JupyterLab has many more examples of important concepts to understand to enable success in developing with JupyterLab, including how to check for and handle exceptions with Unit Tests and a Glossary of key terms.
