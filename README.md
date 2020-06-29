@@ -7,7 +7,7 @@ JupyterLab is a next-generation web-based user interface for Project Jupyter tha
    * [Common Mistakes](#common-mistakes)
       * [Using the Proper Kernel](#using-the-proper-kernel)
       * [Library Management](#library-management)
-      * [Deleting Code and Retain Results](#delete-code-and-keeping-changes)
+      * [Deleting Code and Keeping Changes](#deleting-code-and-keeping-changes)
    * [Debugging in JupyterLab](#debugging-in-jupyterlab)
       * [Magic Commands](#magic-commands)
       * [%debug](#debug)
