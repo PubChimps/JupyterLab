@@ -7,7 +7,7 @@ JupyterLab is a next-generation web-based user interface for Project Jupyter tha
    * [Common Mistakes](#common-mistakes)
       * [Using the Proper Kernel](#using-the-proper-kernel)
       * [Library Management](#library-management)
-      * [Deleting Code and Retain Results](#delete-code-and-retain-results)
+      * [Deleting Code and Retain Results](#delete-code-and-keeping-changes)
    * [Debugging in JupyterLab](#debugging-in-jupyterlab)
       * [Magic Commands](#magic-commands)
       * [%debug](#debug)
@@ -32,7 +32,7 @@ Utilizing libraries is critical in extending the fuctionality of Python. When us
 |:--:| 
 | *Libraries must installed before they can be imported. This is commonly done with pip* |
 
-### Deleting Code and Retain Results
+### Deleting Code and Keeping Changes
 In JupyterLab, code that is not needed can be deleted from a notebook by using the "cut cell" feature. However, the changes made to variables, objects, and files of deleted code will remain in the current kernel session. An example is illustrated in the gif below. If the value of x is intended to be 5 and not 1000, the variable will not revert back to its intial value just because the code that altered it was deleted, and the first cell of code must be rerun.
 
 
