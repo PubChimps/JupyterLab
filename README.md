@@ -53,6 +53,11 @@ pip list
 Magic commands can also be used for debugging in JupyterLab.
 
 ### %debug
+The code below that finda the intersection between two strings will be used to showcase the `%debug` and `%pdb` features in JupyterLab.
+
+<script src="https://gist.github.com/PubChimps/70cca0645173606f0d111a63cac70261.js"></script>
+
+
 ### %pdb
 
 `%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`.
