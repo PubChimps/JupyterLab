@@ -75,10 +75,10 @@ def intersect(s,t):
 
     for i in t:
         if count[i] != 0:
-            res = res + i
+            result = result + i
             count[i] = count[i] - 1
   
-    return res
+    return result
 
 def getintersect(s,t):
     print(intersect(s,t))
