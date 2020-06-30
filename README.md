@@ -110,6 +110,8 @@ The current state of variables at the time of exception can also be displayed wi
 |:--:| 
 | *Finding and fixing code thanks to `%debug`* |
 
+`%debug` is an excellent option for debugging in JupyterLab as it is standard, lightweight, performant, and can cover a wide variety of debugging needs.
+
 ### %pdb
 
 `%pdb` stands for "Python Debugger." Executing this magic command at the beginning of a notebook will JupyterLab to automatically enter debugging mode when it hits an error or exception. `pdb` is also a library and can be adding by placing `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. Here is the example similar to the one above with an included breakpoint.
@@ -155,6 +157,8 @@ From here, variables can be analzyed as before, and execution can continue to ru
 |![gif9.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif2.GIF?raw=true) |  
 |:--:| 
 | *Stepping over the `countdict()` function with `n` as it is known to work* |
+
+`%pdb` is a great option to use for debugging. With its easy inclusion of breakpoints, it can be especially useful when running other people's code.
 
 ## Review and Next Steps
 This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. Some concepts are especially useful in debugging, such as analyzing a *stack trace*, inserting *breakpoints*, and *stepping into* as well as *stepping over* functions.
