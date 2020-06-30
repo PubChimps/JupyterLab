@@ -93,9 +93,37 @@ The current state of variables at the time of exception can also be displayed wi
 
 ### %pdb
 
-`%pdb` stands for "Python Debugger." Executing this magic command at the beginning of a notebook will JupyterLab to automatically enter debugging mode when it hits an error or exception. `pdb` is also a library and can be adding by placing `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. Here is the example from above with an included breakpoint.
+`%pdb` stands for "Python Debugger." Executing this magic command at the beginning of a notebook will JupyterLab to automatically enter debugging mode when it hits an error or exception. `pdb` is also a library and can be adding by placing `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. Here is the example similar to the one above with an included breakpoint.
 
+```
+%pdb
+import pdb
+def countdict(s):
+    counter = dict()
 
+    for i in s:
+        if i in counter.keys():
+            counter[i] += 1
+        else:
+            counter[i] = 1
+    return counter
+
+def intersect(s,t):
+    s = s.replace(' ', '')
+
+    count = countdict(s)
+
+    for i in t:
+        if count[i] != 0:
+            result = result + i
+            count[i] = count[i] - 1
+  
+    return result
+
+def getintersect(s,t):
+    pdb.set_trace()
+    print(intersect(s,t))
+```
 
 From here, variables can be analzyed as before, and execution can continue to run by *stepping into* and *stepping over* subsequant code. Stepping into code brings the debugger to the next line of code in a sequence and into a function if it is called. This is achieved by entering `s` in the debugger. Stepping over code will skip over a called function and just return its results. This is useful for navigating passed functions that are known to operate as expected, and it is done by typing `n`.
 
