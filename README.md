@@ -86,10 +86,29 @@ def getintersect(s,t):
 
 If copied into a notebook cell, this code can be run `getintersect('Bloomberg','BQuant Advocate')` and will produce a KeyError as follows:
 
+
+|![gif4.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif4.GIF?raw=true) |  
+|:--:| 
+| *KeyError* |
+
 This KeyError can be investigated further be using `%debug`. Upon entering debugging mode, a list of available options can be presented by entering `h`. A *stack trace* is a hierarchical list of function calls that were made to produce an exception. A full stack trace can be provided by entering `bt` and navigated by typing `up` or `down`. 
 
 
+|![gif5.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif5.GIF?raw=true) |  
+|:--:| 
+| *h list the available debugging commands* |
+
 The current state of variables at the time of exception can also be displayed with `%debug`. The following gif shows how this is used to fix the KeyError.
+
+
+|![gif6.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif6.GIF?raw=true) |  
+|:--:| 
+| *Finding variables that caused a KeyError* |
+
+
+|![gif7.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif7.GIF?raw=true) |  
+|:--:| 
+| *Finding and fixing code thanks to `%debug`* |
 
 ### %pdb
 
@@ -125,7 +144,17 @@ def getintersect(s,t):
     print(intersect(s,t))
 ```
 
+
+|![gif8.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif8.GIF?raw=true) |  
+|:--:| 
+| *Inserting breakpoints can provide checks against troublesome code* |
+
 From here, variables can be analzyed as before, and execution can continue to run by *stepping into* and *stepping over* subsequant code. Stepping into code brings the debugger to the next line of code in a sequence and into a function if it is called. This is achieved by entering `s` in the debugger. Stepping over code will skip over a called function and just return its results. This is useful for navigating passed functions that are known to operate as expected, and it is done by typing `n`.
+
+
+|![gif9.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif2.GIF?raw=true) |  
+|:--:| 
+| *Stepping over the `countdict()` function with `n` as it is known to work* |
 
 ## Review and Next Steps
 This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. Some concepts are especially useful in debugging, such as analyzing a *stack trace*, inserting *breakpoints*, and *stepping into* as well as *stepping over* functions.
