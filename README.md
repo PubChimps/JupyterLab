@@ -1,6 +1,6 @@
 # Guide to JupyterLab - Debugging in JupyterLab
 
-JupyterLab is a next-generation web-based user interface for Project Jupyter that enables the interactive development and organization of computing serivces across dozens of programming languages. When writing Python in JuypterLab, both new and experienced developers may run into issues. A debugger is a programming tool that can provide additional context to errors and exceptions that may occur when executing code. This guide will provide an introduction to debugging in JupyterLab. For more information on JupyerLab, check out the rest of the Guide to JupyterLab series.
+*JupyterLab* is a next-generation web-based user interface for *Project Jupyter* that enables the interactive development and organization of computing serivces across dozens of programming languages. When writing *Python* in JuypterLab, both new and experienced developers may run into issues. A *debugger* is a programming tool that can provide additional context to *errors* and *exceptions* that may occur when executing code. This guide will provide an introduction to debugging in JupyterLab. For more information on JupyerLab, check out the rest of the Guide to JupyterLab series.
 
 ## Outline
 <!--ts-->
@@ -19,14 +19,14 @@ JupyterLab is a next-generation web-based user interface for Project Jupyter tha
 Before exploring how to utilize a debugger for effective programming in JupyterLab, lets take a look at how to quickly solve three of the most frequent mistakes performed when using Jupyterlab, for more quick fixes check out Guide to JupyterLab - Common Mistakes.
 
 ### Using the Proper Kernel
-A kernel provides programming language support in JupyterLab. Navigating the many development environments availble in JupyterLab can be tricking, especially in when utilizing cloud-managed notebook sevices. For instance, [Azure Notebooks](https://notebooks.azure.com/help/jupyter-notebooks/available-kernels) offers 5 different kernels in 3 programming languages. An error may be produced by running code in the wrong environment, such as the example below, but it is an easy fix.
+A *kernel* provides programming language support in JupyterLab. Navigating the many development environments available in JupyterLab can be tricky, especially when utilizing cloud-managed notebook sevices. For instance, [Azure Notebooks](https://notebooks.azure.com/help/jupyter-notebooks/available-kernels) offers 5 different kernels in 3 programming languages. An error may be produced by running code in the wrong environment, such as the example below, but it is an easy fix.
 
 |![gif2.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif2.GIF?raw=true) |  
 |:--:| 
 | *JupyterLab is a development frontend that enables many different programming language backends* |
 
 ### Library Management
-Utilizing libraries is critical in extending the fuctionality of Python. When using managed JupyterLab instances, it can be hard to identify which library packages are available, as many come preinstalled. Lines of code beginning with an exclamation point `!` will be executed as shell commands in JupyterLab. This functionality can used to identify the packages already installed in an evironment by running `!pip list`. [pip](https://pypi.org/project/pip/) is a package installer fo Python, and can install missing libraries with `!pip install <missing package>` (note: often, a kernel will have to be restarted in order for the newly installed libraries to be available).
+Utilizing libraries is critical in extending the fuctionality of Python. When using managed JupyterLab instances, it can be hard to identify which library packages are available, as many come preinstalled. Lines of code beginning with an exclamation point `!` will be executed as shell commands in JupyterLab. This functionality can used to identify the packages already installed in an evironment by running `!pip list`. [*pip*](https://pypi.org/project/pip/) is a package installer fo Python, and can install missing libraries with `!pip install <missing package>` (note: often, a kernel will have to be restarted in order for the newly installed libraries to be available).
 
 |![gif3.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif3.GIF?raw=true) |  
 |:--:| 
@@ -44,7 +44,7 @@ In JupyterLab, code that is not needed can be deleted from a notebook by using t
 If solutions to common mistakes are not resolving the issues present in Python code, a debugger may be needed to provide additional information. This section will introduce two common methods of debugging in JupyterLab.
 
 ### Magic Commands 
-Magic commands are special enhancements that can provide additional functionality beyond typical Python snytax and are called by using the percent sign `%`. For example, the same code provide to run a shell command in a previous section (`!pip list`) can be rewrititen with a magic command as follows:
+*Magic commands* are special enhancements that can provide additional functionality beyond typical Python snytax and are called by using the percent sign `%`. For example, the same code provide to run a shell command in a previous section (`!pip list`) can be rewrititen with a magic command as follows:
 
 ```
 %shell
@@ -93,9 +93,14 @@ The current state of variables at the time of exception can also be displayed wi
 
 ### %pdb
 
-`%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`. It also be used as a library by adding `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is 
-a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. From here, variables can be analzyed as before, and execution can continue to run by *stepping into* and *stepping over* subsequant code. 
+`%pdb` stands for "Python Debugger." Executing this magic command at the begging of a notebook will allow trigger JupyterLab it automatically enter debugging mode when it hits an error or exception. The gif below illustrates the previous example, this time using `%pdb`. 
+
+
+It also can be used as a library by adding `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aide with debugging. A breakpoint is 
+a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. From here, variables can be analzyed as before, and execution can continue to run by *stepping into* and *stepping over* subsequant code. Stepping into code brings the debugger to the next line of code in a sequence and into a function if it is called. This is achieved by entering `s` in the debugger. Stepping over code will skip over a called function and just return its results. This is useful for navigating passed functions that are known to operate as expected, and it is done by typing `n`.
 
 ## Review and Next Steps
-This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. The Guide to JupyterLab has many more examples of important concepts to understand to enable success in developing with JupyterLab, including how to check for and handle exceptions with Unit Tests and a Glossary of key terms.
+This guide provided some examples that can help when issues arise while coding in JupyterLab, both with and without debuggers. It showed how to run shell commands in a Python notebook with `!` and `%`. It also introduced magic commands, and illustrated how `%debug` and `%pdb` can be used to provide additional context and assistance when resolving Python errors and exceptions. Some concepts are especially useful in debugging, such as analyzing a *stack trace*, inserting *breakpoints*, and *stepping into* as well as *stepping over* functions.
+
+The Guide to JupyterLab has many more examples of important concepts to understand to enable success in developing with JupyterLab, including how to check for and handle exceptions with Unit Tests and a Glossary of key terms.
 
