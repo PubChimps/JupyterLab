@@ -57,31 +57,31 @@ The code below finds the intersection between two strings and will be used to sh
 
 ```
 def countdict(s):
-   counter = dict()
+    counter = dict()
 
-   for i in s:
-       if i in counter.keys():
-           counter[i] += 1
-       else:
-           counter[i] = 1
-   return counter
+    for i in s:
+        if i in counter.keys():
+            counter[i] += 1
+        else:
+            counter[i] = 1
+    return counter
 
 def intersect(s,t):
-  s = s.replace(' ', '')
-  t = t.replace(' ', '')
-  result = ''
+    s = s.replace(' ', '')
+    t = t.replace(' ', '')
+    result = ''
 
-  count = countdict(s)
+    count = countdict(s)
 
-  for i in t:
-    if count[i] != 0:
-      res = res + i
-      count[i] = count[i] - 1
+    for i in t:
+        if count[i] != 0:
+            res = res + i
+            count[i] = count[i] - 1
   
-  return res
+    return res
 
 def getintersect(s,t):
-   print(intersect(s,t))
+    print(intersect(s,t))
 ```
 
 If copied into a notebook cell, this code can be run `getintersect('Bloomberg','BQuant Advocate')` and will produce a KeyError as follows:
