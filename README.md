@@ -134,6 +134,9 @@ def intersect(s,t):
 
     count = countdict(s)
 
+    t = t.replace(' ', '')
+    result = ''
+
     for i in t:
         if count[i] != 0:
             result = result + i
