@@ -38,7 +38,7 @@ In JupyterLab, code that is not needed can be deleted from a notebook by using t
 
 |![gif1.GIF](https://github.com/PubChimps/JupyterLab/blob/master/media/gif1.GIF?raw=true) |  
 |:--:| 
-| *The affects of code that was previously run do not disappear after a cell's deletion* |
+| *The effects of code that was previously run do not disappear after a cell's deletion* |
 
 ## Debugging in JupyterLab
 If solutions to common mistakes are not resolving the issues present in Python code, a debugger may be needed to provide additional information. This section will introduce two common methods of debugging in JupyterLab.
