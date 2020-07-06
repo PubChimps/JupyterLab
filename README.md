@@ -114,7 +114,7 @@ The current state of variables at the time of exception can also be displayed wi
 
 ### %pdb
 
-`%pdb` stands for "Python Debugger." Executing this magic command at the beginning of a notebook will JupyterLab to automatically enter debugging mode when it hits an error or exception. `pdb` is also a library and can be adding by placing `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aid with debugging. A breakpoint is a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. Here is the example similar to the one above with an included breakpoint.
+`%pdb` stands for "Python Debugger." Executing this magic command at the beginning of a notebook will JupyterLab to automatically enter debugging mode when it hits an error or exception. `pdb` is also a library and can be adding by placing `import pdb` at the beginning of a notebook. The addition of this library will allow the insertion of *breakpoints* to aid with debugging. A breakpoint is a location within a program where a debugger will temporarily pause execution so that a finer level of investigation can be achieved. Breakpoints can be added to a notebook with the line `pdb.set_trace()`. Here is an example similar to the one above with an included breakpoint.
 
 ```
 %pdb
